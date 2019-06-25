@@ -34,7 +34,10 @@ let project = {
   ]
 };
 
+
 project.steps.forEach((step, index) => {
-  let member = index % 3;
+  let member = index % project.committee.length;
   step.person = project.committee[member];
 })
+
+console.log(project.steps)
